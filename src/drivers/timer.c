@@ -14,7 +14,7 @@
 void
 init_timer (int frequency)
 {
-  int divisor = PIT_FREQUENCY / frequency;
+  int divisor = PIT_FREQUENCY / frequency; // Why the fuck are we using this
   outb (TIMER_COMMAND, 0x36);
   outb (TIMER_CHANNEL, divisor & 0xFF);
   outb (TIMER_CHANNEL, (divisor >> 8) & 0xFF);
