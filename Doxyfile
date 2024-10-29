@@ -1,0 +1,31 @@
+# Doxyfile Configuration for Kore Kernel
+
+# Project name
+PROJECT_NAME           = "Kore Kernel"
+PROJECT_BRIEF          = "Documentation for the Kore Kernel project"
+
+# Input settings
+INPUT                  = src/
+FILE_PATTERNS          = *.c *.h *.S *.asm
+RECURSIVE              = YES
+
+# Document all files and members
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+
+# Source code configuration
+INLINE_SOURCES         = YES
+STRIP_CODE_COMMENTS    = NO
+
+# Documentation format settings
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+# Output directory
+OUTPUT_DIRECTORY       = docs/
+
+# Additional settings
+QUIET                  = NO
+WARN_IF_UNDOCUMENTED   = YES

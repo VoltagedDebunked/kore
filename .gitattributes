@@ -1,0 +1,21 @@
+# Treat C source files as text
+*.c text
+
+# Treat header files as text
+*.h text
+
+# Specify custom diff for C files
+*.c diff=c
+*.h diff=c
+
+# Set merge strategy for binary files (e.g., object files)
+*.o binary
+*.a binary
+
+# Ignore certain files during exports
+*.log export-ignore
+*.tmp export-ignore
+
+# Use linguist attributes
+*.c linguist-language=C
+*.h linguist-language=C

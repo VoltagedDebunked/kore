@@ -1,0 +1,14 @@
+# IDE Configs
+
+/.vscode/
+/.idea/
+
+# Logfiles and Varfiles
+
+*.log
+*.var
+
+# Binaries
+
+*.bin
+*.o
