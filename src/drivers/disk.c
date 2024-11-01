@@ -93,5 +93,6 @@ write_sector (uint64_t lba, const void *buffer)
 void
 disk_info ()
 {
-  // Optionally implement function to display disk info
+  // Optionally implement function to display disk info, not needed. fucking
+  // stupid thing.
 }

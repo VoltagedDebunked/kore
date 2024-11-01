@@ -41,8 +41,9 @@ inb (unsigned short port)
 }
 
 unsigned char
-inb_asm (unsigned short port) //  This is a stupid duplicate of inb, i had
-                              // to rename it so its aviable in assembly. fuck...
+inb_asm (
+    unsigned short port) //  This is a stupid duplicate of inb, i had
+                         // to rename it so its aviable in assembly. fuck...
 {
   unsigned char result;
   asm volatile ("inb %1, %0" : "=a"(result) : "Nd"(port));

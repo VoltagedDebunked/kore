@@ -240,7 +240,8 @@ allocate_memory (int size)
   return NULL;
 }
 
-// Enhanced memory deallocation with security features (yes i know this sounds stupid)
+// Enhanced memory deallocation with security features (yes i know this sounds
+// stupid)
 void
 free_memory (void *ptr)
 {

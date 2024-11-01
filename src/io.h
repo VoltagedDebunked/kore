@@ -17,5 +17,7 @@ unsigned short inw (unsigned short port);
 void write_memory (uintptr_t address, unsigned char value);
 unsigned char read_memory (uintptr_t address);
 void print_string (const char *str);
+void print_number (uint64_t num);
+void print_hex (uint64_t num);
 
 #endif

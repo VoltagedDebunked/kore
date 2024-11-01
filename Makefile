@@ -5,8 +5,8 @@ CFLAGS = -m64 -ffreestanding -O3
 
 all: kore
 
-kernel.bin: src/kernel.o src/io.o src/gdt.o src/idt.o src/memory.o src/drivers/timer.o src/drivers/keyboard.o src/drivers/disk.o src/interrupts.o
-	$(LD) -T scripts/linker.ld -o kernel.bin src/kernel.o src/io.o src/gdt.o src/idt.o src/memory.o src/drivers/timer.o src/drivers/keyboard.o src/drivers/disk.o src/interrupts.o
+kernel.bin: src/kernel.o src/io.o src/gdt.o src/idt.o src/memory.o src/drivers/timer.o src/drivers/keyboard.o src/drivers/disk.o src/interrupts.o src/drivers/firmware.o
+	$(LD) -T scripts/linker.ld -o kernel.bin src/kernel.o src/io.o src/gdt.o src/idt.o src/memory.o src/drivers/timer.o src/drivers/keyboard.o src/drivers/disk.o src/drivers/firmware.o src/interrupts.o
 
 src/kernel.o: src/kernel.c
 	$(CC) $(CFLAGS) -c src/kernel.c -o src/kernel.o
@@ -31,6 +31,9 @@ src/drivers/keyboard.o: src/drivers/keyboard.c
 
 src/drivers/disk.o: src/drivers/disk.c
 	$(CC) $(CFLAGS) -c src/drivers/disk.c -o src/drivers/disk.o
+
+src/drivers/firmware.o: src/drivers/firmware.c
+	$(CC) $(CFLAGS) -c src/drivers/firmware.c -o src/drivers/firmware.o
 
 src/interrupts.o: src/interrupts.asm
 	$(AS) src/interrupts.asm -f elf64 -o src/interrupts.o
